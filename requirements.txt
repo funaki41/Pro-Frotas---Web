@@ -1,7 +1,6 @@
 # Sistema de Validação de NFe's - Dependências
 
-# === Core Dependencies ===
-python>=3.11
+# Requer Python 3.11+
 
 # Interface Web
 streamlit>=1.30.0
@@ -44,7 +43,9 @@ ruff>=0.0.287
 # === Optional Dependencies ===
 # PDF Generation (se precisar gerar DANFEs)
 reportlab>=4.0.4
-brazilfiscalreport>=3.0.0
+
+# O pacote abaixo NÃO tem builds novos; instale só quando python < 3.11
+brazilfiscalreport<=0.5.33; python_version < "3.11"
 
 # Database (se precisar persistir dados)
 sqlalchemy>=2.0.0
